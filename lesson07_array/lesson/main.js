@@ -59,3 +59,82 @@ console.log(arr1);
 
 
 
+
+// ОБеднуемо масиви
+
+let a = ['a1', 'a2', 'a3', 'a4', 'a5']
+let b = ['b1', 'b2', 'b3', 'b4', 'b5']
+
+let res = [...a, ...b]
+let res2 = a.concat(b)
+
+console.log(res);
+console.log(res2);
+
+
+// Строки в масивах
+
+let strArr = "Hello, Sasha, sveta"
+
+let strArrRess = strArr.split(',')
+
+console.log(strArrRess);
+
+
+// Перетворюемо масив в строку
+let strArr1 = ['Hello', 'Sasha', 'Sveta']
+
+let strArrRess1 = strArr1.join(',')
+
+console.log(strArrRess1);
+
+
+
+//Пошук
+
+
+let users = [
+    {
+        name: 'sasha 0',
+        age: 20
+    },
+    {
+        name: 'sasha 1',
+        age: 16
+    },
+    {
+        name: 'sasha 2',
+        age: 33
+    },
+    {
+        name: 'sasha 3',
+        age: 55
+    },
+    {
+        name: 'sasha 4',
+        age: 16
+    },
+]
+
+// Шукає перший
+let finde1 = users.find((item, index) => {
+    return item.age == 16
+})
+
+
+// Шукає індекс
+let finde3 = users.findIndex((item, index) => {
+    return item.age == 16
+})
+console.log(finde3);
+
+// Шукає всі
+let finde2 = users.filter((item, index) => {
+    return item.age > 16
+})
+
+console.log(finde2);
+
+
+
+
